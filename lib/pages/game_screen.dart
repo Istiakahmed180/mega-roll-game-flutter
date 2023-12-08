@@ -85,10 +85,8 @@ class _GameScreenState extends State<GameScreen> {
                 ),
                 if (result.isEmpty)
                   DiceButton(level: "Roll", onPressed: diceRoll),
-                const SizedBox(
-                  height: 10,
-                ),
-                DiceButton(level: "Reset", onPressed: diceReset)
+                if (result.isNotEmpty)
+                  DiceButton(level: "Reset", onPressed: diceReset)
               ],
             )
           ],
